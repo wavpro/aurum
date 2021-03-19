@@ -1,4 +1,4 @@
-## Aurum URL shortener  
+## Aurum.js URL shortener  
 A fast and simple node.js library for URL shortening.  
 Install using npm:
 ```
@@ -11,14 +11,14 @@ A list of examples on how to use the package.
 
 #### Basic Redirection  
 ```js
-const Redirect = require('aurum') 
+const Redirect = require('@wavpro/aurum.js') 
 const redirect = new Redirect('/', 3000)
 
 redirect.listen()
 ```  
 #### Adding a redirect  
 ```js
-const Redirect = require('aurum') 
+const Redirect = require('@wavpro/aurum.js') 
 const redirect = new Redirect('/', 3000)
 
 redirect.listen()
@@ -28,7 +28,7 @@ redirect.addURL('example', 'https://google.com/')
 ```  
 #### Getting info about an URL
 ```js
-const Redirect = require('aurum') 
+const Redirect = require('@wavpro/aurum.js') 
 const redirect = new Redirect('/', 3000)
 
 redirect.listen()
@@ -38,7 +38,7 @@ redirect.getURL('example')
 ```
 #### Using with custom express setup
 ```js
-const Redirect = require('aurum') 
+const Redirect = require('@wavpro/aurum.js') 
 const express = require('express')
 const app = express()
 
@@ -52,7 +52,7 @@ redirect.listen('none', app)
 #### Import data from YOURLS database  
 The package also has a built in converter that converts data from a YOURLS database into the Augium format. Currently, it does not convert logs, as that seems to be problematic. 
 ```js
-const Redirect = require('aurum')
+const Redirect = require('@wavpro/aurum.js')
 const mysql = require('mysql')
 var connection = mysql.createConnection({
   host     : 'foo',
